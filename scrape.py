@@ -25,3 +25,11 @@ except TimeoutException:
 	browser.quit()
 
 # grabbing repo titles from URL
+titles_element = browser.find_elements_by_xpath("//a[@class='text-bold']")
+
+# parsing returned objects into desired items ('list comprehension')
+titles = [x.text for x in titles_element]
+
+# display title items in terminal
+print('Repo titles:')
+print(titles, '\n')
