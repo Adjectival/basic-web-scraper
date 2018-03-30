@@ -5,6 +5,8 @@
 Runs an incognito Chrome browser
 + aimed at this URL: https://github.com/Adjectival
 + targets titles of repos using class names
++ collects repo titles into array (list comprehension)
++ prints titles in CLI
 
 ## Install
 + ensure you have virtualenv for your python3
@@ -14,5 +16,4 @@ Runs an incognito Chrome browser
 - ```python scrape.py```
 
 ## Development Milestones
-+ collects repo titles into array (list comprehension)
-+ prints titles in CLI
++ retrieve languages from scraped repos
