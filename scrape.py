@@ -33,3 +33,16 @@ titles = [x.text for x in titles_element]
 # display title items in terminal
 print('Repo titles:')
 print(titles, '\n')
+
+# grabbing repo languages from URL
+languages_element = browser.find_elements_by_xpath("//p[@class='mb-0 f6 text-gray']")
+
+# parsing returned objects into desired items ('list comprehension')
+languages = [x.text for x in languages_element]
+
+# display title items in terminal
+print('Repo languages:')
+print(languages, '\n')
+
+
+
