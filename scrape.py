@@ -25,14 +25,14 @@ except TimeoutException:
 	browser.quit()
 
 # grabbing repo titles from URL
-titles_element = browser.find_elements_by_xpath("//a[@class='text-bold']")
+repos_element = browser.find_elements_by_xpath("//a[@class='text-bold']")
 
 # parsing returned objects into desired items ('list comprehension')
-titles = [x.text for x in titles_element]
+repos = [x.text for x in repos_element]
 
-# display title items in terminal
-print('Repo titles:')
-print(titles, '\n')
+# display repo items in terminal
+print('Repo names:')
+print(repos, '\n')
 
 # grabbing repo languages from URL
 languages_element = browser.find_elements_by_xpath("//p[@class='mb-0 f6 text-gray']")
@@ -43,6 +43,11 @@ languages = [x.text for x in languages_element]
 # display title items in terminal
 print('Repo languages:')
 print(languages, '\n')
+
+# combine and match array elements
+for repo, language in zip(repos, languages):
+	print("Repo: Language")
+	print(repo + ": " + language, '\n')
 
 
 
